@@ -28,14 +28,42 @@
 .websiteName {
   color: #FFFFFF !important;
   /* White color for the website name */
-  font-weight: 400 !important;
+  font-weight: 800 !important;
   text-transform: uppercase;
   font-size: 40px !important;
+  font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
+}
+
+.css-j400xw-MuiPaper-root-MuiDrawer-paper {
+  background-color: black !important;
+  color: #FFFFFF !important;
 }
 
 .drawerBox {
   width: 250px;
 }
+
+.backButton {
+  color: #FFF;
+  /* Back button color */
+  margin: 16px;
+}
+.list {
+  text-align: center !important;
+  /* Center the list items */
+}
+
+.list .MuiListItemText-primary {
+  color: #fff !important; /* Text color */
+  font-size: calc(16px + 1vw) !important; /* Responsive font size */
+  font-weight: 400 !important;
+}
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 
 @media (max-width: 600px) {
   .websiteName {

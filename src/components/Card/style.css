@@ -1,0 +1,64 @@
+/* Card.css */
+.card-container-motion{
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-card {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .horizontal-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-image-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .card-image {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 31px;
+  }
+  
+  .card-content h3 {
+    font-size: 49px;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 55px;
+    color: #dcdcdc;
+    padding-right: 143px;
+  }
+  
+  /* Make the card stack vertically on smaller screens */
+  @media (max-width: 768px) {
+    .horizontal-card {
+      flex-direction: column;
+    }
+  
+    .card-image-container {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

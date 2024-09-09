@@ -1,0 +1,99 @@
+/* Container for the entire section */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111; /* Dark background */
+    color: white; /* White text */
+    padding: 5vw; /* Responsive padding */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Left side text */
+.profile-text {
+    flex: 1 1 60%; /* Occupies 60% of the width on large screens */
+    font-size: calc(12px + 1vw); /* Responsive font size */
+    font-weight: 300;
+    padding-right: 2vw;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+/* Strong emphasis in text */
+.profile-text strong {
+    font-weight: 800;
+}
+
+/* Right side profile picture and info */
+.profile-image {
+    flex: 1 1 30%; /* Occupies 30% of the width on large screens */
+    text-align: center;
+}
+
+.director-photo {
+    width: 100%;
+    max-width: 300px; /* Set max-width for image */
+    height: auto;
+    border: 10px solid white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.director-info h3 {
+    font-size: calc(16px + 1vw); /* Responsive font size */
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.director-info p {
+    font-size: calc(12px + 0.5vw); /* Responsive font size */
+    font-weight: 300;
+    line-height: calc(14px + 0.5vw); /* Responsive line height */
+    margin: 0px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 8vw; /* Increased padding for smaller screens */
+    }
+
+    .profile-text {
+        margin-bottom: 30px;
+        font-size: calc(14px + 1vw); /* Adjust text size for small screens */
+        padding-right: 0;
+    }
+
+    .director-photo {
+        max-width: 200px; /* Adjust max-width for smaller screens */
+    }
+
+    .director-info h3 {
+        font-size: calc(18px + 1vw);
+    }
+
+    .director-info p {
+        font-size: calc(14px + 0.5vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 10vw; /* Further increase padding for very small screens */
+    }
+
+    .director-photo {
+        max-width: 150px; /* Smaller image for very small screens */
+    }
+
+    .director-info h3 {
+        font-size: calc(16px + 1vw);
+    }
+
+    .director-info p {
+        font-size: calc(12px + 0.5vw);
+    }
+}

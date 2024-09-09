@@ -1,14 +1,17 @@
 .banner {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Dynamic height based on viewport height minus fixed amount */
+    height: calc(100vh);
+    /* Dynamic height based on viewport height minus fixed amount */
     overflow: hidden;
 }
 
 .banner-media {
     width: 100%;
-    height: 100%; /* Ensure media fills the container */
-    object-fit: cover; /* Cover ensures the media covers the container while preserving aspect ratio */
+    height: 100%;
+    /* Ensure media fills the container */
+    object-fit: cover;
+    /* Cover ensures the media covers the container while preserving aspect ratio */
 }
 
 .overlay {
@@ -16,50 +19,71 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ensure overlay covers the entire banner */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    pointer-events: none; /* Allows clicks to pass through */
+    height: 100%;
+    /* Ensure overlay covers the entire banner */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    pointer-events: none;
+    /* Allows clicks to pass through */
 }
 
 .banner-content {
     position: absolute;
-    bottom: calc(2vw + 20px); /* Responsive spacing from bottom */
-    left: calc(2vw + 20px); /* Responsive spacing from left */
-    color: #fff; /* White text color for contrast */
-    max-width: calc(100% - 2vw - 40px); /* Ensure content fits within the banner */
-    padding: calc(1vw + 10px); /* Responsive padding */
+    bottom: calc(2vw + 20px);
+    /* Responsive spacing from bottom */
+    left: calc(2vw + 20px);
+    /* Responsive spacing from left */
+    color: #fff;
+    /* White text color for contrast */
+    max-width: calc(100% - 2vw - 40px);
+    /* Ensure content fits within the banner */
+    padding: calc(1vw + 10px);
+    /* Responsive padding */
 }
 
 .banner-text .banner-title {
-    font-size: calc(2vw + 20px); /* Responsive font size */
-    margin-bottom: calc(1vw + 10px); /* Responsive margin */
+    font-size: calc(2vw + 20px);
     font-weight: 300;
+    margin: 0px !important;
 }
 
 .banner-text .banner-description {
-    font-size: calc(1.5vw + 15px); /* Responsive font size */
-    margin-bottom: calc(1vw + 15px); /* Responsive margin */
+    font-size: calc(1.5vw + 15px);
+    /* Responsive font size */
+    margin-bottom: calc(1vw + 15px);
+    /* Responsive margin */
     font-weight: 300;
+    margin-top: 0px !important;
 }
 
 .banner-title-span {
-    font-size: calc(2.5vw + 20px); /* Responsive font size for highlighted text */
-    font-weight: 400;
+    font-size: calc(2.5vw + 20px);
+    /* Responsive font size for highlighted text */
+    font-weight: 800;
 }
 
 .learn-more {
-    background: transparent; /* Transparent background */
-    border: 2px solid #fff; /* White border */
-    color: #fff; /* White text color */
-    padding: calc(0.5vw + 10px) calc(1vw + 20px); /* Responsive padding */
-    font-size: calc(1vw + 12px); /* Responsive font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    background: transparent;
+    /* Transparent background */
+    border: 2px solid #fff;
+    /* White border */
+    color: #fff;
+    /* White text color */
+    padding: calc(0.5vw + 10px) calc(1vw + 20px);
+    /* Responsive padding */
+    font-size: calc(1vw + 12px);
+    /* Responsive font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background 0.3s, color 0.3s;
+    /* Smooth transition for hover effects */
 }
 
 .learn-more:hover {
-    background: #fff; /* White background on hover */
-    color: #000; /* Black text color on hover */
+    background: #fff;
+    /* White background on hover */
+    color: #000;
+    /* Black text color on hover */
 }
 
 /* Responsive adjustments */
@@ -67,99 +91,130 @@
 /* For large desktops and tablets (width > 1024px) */
 @media (max-width: 1024px) {
     .banner {
-        height: calc(80vh - 50px); /* Adjust height for large screens */
+        height: calc(100vh);
+        /* Adjust height for large screens */
     }
 
     .banner-content {
-        bottom: calc(1.5vw + 15px); /* Adjust spacing */
-        left: calc(1.5vw + 15px); /* Adjust spacing */
+        bottom: calc(1.5vw + 15px);
+        /* Adjust spacing */
+        left: calc(1.5vw + 15px);
+        /* Adjust spacing */
     }
 
     .banner-text .banner-title {
-        font-size: calc(1.5vw + 18px); /* Adjust font size */
+        font-size: calc(1.5vw + 18px);
+        /* Adjust font size */
     }
 
     .banner-text .banner-description {
-        font-size: calc(1vw + 12px); /* Adjust font size */
+        font-size: calc(1vw + 12px);
+        /* Adjust font size */
     }
 
     .learn-more {
-        font-size: calc(0.8vw + 10px); /* Adjust font size */
-        padding: calc(0.4vw + 8px) calc(0.8vw + 16px); /* Adjust padding */
+        font-size: calc(0.8vw + 10px);
+        /* Adjust font size */
+        padding: calc(0.4vw + 8px) calc(0.8vw + 16px);
+        /* Adjust padding */
     }
 }
 
 /* For tablets and smaller desktops (width > 768px) */
 @media (max-width: 768px) {
     .banner {
-        height: calc(70vh - 30px); /* Adjust height for tablets */
+        height: calc(100vh);
+        ;
+        /* Adjust height for tablets */
     }
 
     .banner-content {
-        bottom: calc(1vw + 10px); /* Adjust spacing */
-        left: calc(1vw + 10px); /* Adjust spacing */
+        bottom: calc(1vw + 10px);
+        /* Adjust spacing */
+        left: calc(1vw + 10px);
+        /* Adjust spacing */
     }
 
     .banner-text .banner-title {
-        font-size: calc(1vw + 16px); /* Adjust font size */
+        font-size: calc(1vw + 16px);
+        /* Adjust font size */
     }
 
     .banner-text .banner-description {
-        font-size: calc(0.8vw + 10px); /* Adjust font size */
+        font-size: calc(0.8vw + 10px);
+        /* Adjust font size */
     }
 
     .learn-more {
-        font-size: calc(0.6vw + 8px); /* Adjust font size */
-        padding: calc(0.3vw + 6px) calc(0.6vw + 12px); /* Adjust padding */
+        font-size: calc(0.6vw + 8px);
+        /* Adjust font size */
+        padding: calc(0.3vw + 6px) calc(0.6vw + 12px);
+        /* Adjust padding */
     }
 }
 
 /* For mobile devices (width > 600px) */
 @media (max-width: 600px) {
     .banner {
-        height: calc(60vh - 20px); /* Adjust height for mobile devices */
+        height: calc(100vh);
+        /* Adjust height for mobile devices */
     }
 
     .banner-content {
-        bottom: calc(0.8vw + 5px); /* Adjust spacing */
-        left: calc(0.8vw + 5px); /* Adjust spacing */
+        bottom: calc(0.8vw + 5px);
+        /* Adjust spacing */
+        left: calc(0.8vw + 5px);
+        /* Adjust spacing */
     }
 
     .banner-text .banner-title {
-        font-size: calc(0.8vw + 14px); /* Adjust font size */
+        font-size: calc(0.8vw + 14px);
+        /* Adjust font size */
     }
 
     .banner-text .banner-description {
-        font-size: calc(0.6vw + 8px); /* Adjust font size */
+        font-size: calc(0.6vw + 8px);
+        /* Adjust font size */
     }
 
     .learn-more {
-        font-size: calc(0.4vw + 6px); /* Adjust font size */
-        padding: calc(0.2vw + 4px) calc(0.4vw + 8px); /* Adjust padding */
+        font-size: calc(0.4vw + 6px);
+        /* Adjust font size */
+        padding: calc(0.2vw + 4px) calc(0.4vw + 8px);
+        /* Adjust padding */
     }
 }
 
 /* For very small screens (width > 400px) */
 @media (max-width: 400px) {
     .banner {
-        height: calc(50vh - 10px); /* Adjust height for very small screens */
+        height: calc(100vh);
+        /* Adjust height for very small screens */
     }
 
     .banner-content {
-        bottom: calc(0.6vw + 3px); /* Adjust spacing */
-        left: calc(0.6vw + 3px); /* Adjust spacing */
+        bottom: calc(0.6vw + 3px);
+        /* Adjust spacing */
+        left: calc(0.6vw + 3px);
+        /* Adjust spacing */
     }
 
     .banner-text .banner-title {
-        font-size: calc(0.6vw + 12px); /* Adjust font size */
+        font-size: calc(0.6vw + 12px);
+        /* Adjust font size */
+    }
+
+    .banner-title-span {
+        font-size: calc(1.5vw + 13px);
+        font-weight: 400;
     }
 
     .banner-text .banner-description {
-        font-size: calc(0.4vw + 6px); /* Adjust font size */
+        font-size: calc(2.4vw + 6px);
     }
 
     .learn-more {
-        font-size: calc(0.2vw + 4px); /* Adjust font size */
-        padding: calc(0.1vw + 2px) calc(0.2vw + 4px); /* Adjust padding */
+        font-size: calc(3.2vw + 4px);
+        padding: calc(0.1vw + 2px) calc(0.2vw + 4px);
     }
 }
