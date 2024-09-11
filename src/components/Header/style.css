@@ -40,7 +40,31 @@
 }
 
 .drawerBox {
-  width: 250px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+}
+
+.drawerContent {
+  flex-grow: 1;
+  /* Ensures that the content above the social icons takes up available space */
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #444;
+}
+
+.drawerTitle {
+  flex-grow: 1;
+  color: #FFFFFF;
+  text-align: right;
+  font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
+  font-size: calc(16px + 1vw) !important;
 }
 
 .backButton {
@@ -48,22 +72,37 @@
   /* Back button color */
   margin: 16px;
 }
+
 .list {
   text-align: center !important;
   /* Center the list items */
 }
 
 .list .MuiListItemText-primary {
-  color: #fff !important; /* Text color */
-  font-size: calc(16px + 1vw) !important; /* Responsive font size */
+  color: #fff !important;
+  /* Text color */
+  font-size: calc(16px + 1vw) !important;
+  /* Responsive font size */
   font-weight: 400 !important;
+  font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
+  text-align: center;
 }
+
+.list .MuiListItemText-primary:hover {
+  color: #888888 !important;
+  font-weight: 300 !important;
+}
+
 .socialIcons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
+.socialIcons .MuiIconButton-root {
+  color: #FFFFFF;
+  font-size: 40px;
+}
 
 @media (max-width: 600px) {
   .websiteName {
@@ -79,7 +118,6 @@
     padding: 0 10px;
     /* Less padding on mobile */
   }
-
 }
 
 @media (min-width: 601px) {

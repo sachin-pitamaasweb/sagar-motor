@@ -1,0 +1,91 @@
+.ReachUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(20px + 2vw); /* Responsive padding */
+}
+
+.ReachUs-container {
+    max-width: calc(500px + 13vw); /* Adjust max-width for responsiveness */
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: calc(15px + 0.5vw); /* Responsive gap */
+}
+
+.input-box, .input-box-area {
+    background-color: transparent;
+    border: 1px solid #444;
+    border-radius: calc(4px + 0.2vw); /* Responsive border-radius */
+    padding: calc(10px + 0.5vw); /* Responsive padding */
+    color: #fff;
+    font-size: calc(16px + 0.5vw); /* Responsive font-size */
+    transition: all 0.3s ease;
+}
+
+.input-box:focus, .input-box-area:focus {
+    outline: none;
+    border-color: #0077ff;
+    box-shadow: 0 0 0 calc(2px + 0.1vw) rgba(0, 119, 255, 0.3); /* Responsive box-shadow */
+}
+
+.input-box-area {
+    resize: vertical;
+    min-height: calc(100px + 1vw); /* Responsive min-height */
+}
+
+.btn {
+    background-color: #fff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: calc(4px + 0.2vw); /* Responsive border-radius */
+    padding: calc(12px + 0.5vw); /* Responsive padding */
+    font-size: calc(16px + 0.5vw); /* Responsive font-size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.input-group {
+    display: flex;
+    gap: calc(15px + 0.5vw); /* Responsive gap */
+}
+
+.input-group input {
+    flex: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-10px - 1vw)); /* Responsive translateY */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form > * {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+form > *:nth-child(1) { animation-delay: calc(0.1s + 0.1vw); }
+form > *:nth-child(2) { animation-delay: calc(0.2s + 0.1vw); }
+form > *:nth-child(3) { animation-delay: calc(0.3s + 0.1vw); }
+form > *:nth-child(4) { animation-delay: calc(0.4s + 0.1vw); }
+form > *:nth-child(5) { animation-delay: calc(0.5s + 0.1vw); }
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+}

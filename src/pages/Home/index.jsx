@@ -10,10 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Banner from '../../components/Banner';
 import ProfileSection from '../../components/ProfileSection';
 import Card from '../../components/Card';
+import ProjectShowcase from '../../components/ProjectShowcase';
+import SafetyGrid from '../../components/SafetyGrid';
 
 // style
 import './style.css';
-import ProjectShowcase from '../../components/ProjectShowcase';
+import ReachUs from '../../components/ReachUs';
 
 const Home = () => {
     const mediaType = 'video';
@@ -48,6 +50,8 @@ const Home = () => {
         speed: 500,
         slidesToShow: 1, // Default: Show 3 cards on larger screens
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         arrows: false,
         centerMode: false,
         responsive: [
@@ -71,7 +75,7 @@ const Home = () => {
             },
         ],
     };
-    
+
 
     return (
         <>
@@ -81,6 +85,8 @@ const Home = () => {
                 altText={altText}
             />
             <ProfileSection />
+            <ProjectShowcase />
+            <SafetyGrid />
             <div className="card-container">
                 <h2 className="main-title">Our Commitment to Excellence</h2>
                 <Slider {...settings} >
@@ -94,8 +100,10 @@ const Home = () => {
                     ))}
                 </Slider>
             </div>
-            <ProjectShowcase />
-
+            <h1 className="main-title" style={{ textAlign: 'center', margin:'0px' }}>
+                Your Trusted Partner, Always Within Reach
+            </h1>
+            <ReachUs />
         </>
     );
 };

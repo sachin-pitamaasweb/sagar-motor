@@ -1,0 +1,88 @@
+.safety-container {
+    display: flex;
+    justify-content: center;
+    padding: calc(10px + 2vw); /* Responsive padding */
+}
+
+.container-safety {
+    width: 100%;
+    padding: calc(20px + 2vw); /* Responsive padding */
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20px + 1vw); /* Responsive gap */
+    margin-bottom: calc(20px + 1vw); /* Responsive margin */
+}
+
+.safety-item {
+    background-color: #2a2a2a;
+    border-radius: calc(10px + 0.5vw); /* Responsive border-radius */
+    padding: calc(20px + 1vw); /* Responsive padding */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(calc(20px + 1vw));
+    animation: fadeIn 0.5s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.safety-item img {
+    width: calc(80px + 2vw); /* Responsive width */
+    height: calc(80px + 2vw); /* Responsive height */
+    margin-bottom: calc(10px + 0.5vw); /* Responsive margin */
+    transition: transform 0.3s ease;
+}
+
+.safety-item h3 {
+    font-size: calc(18px + 1vw); /* Responsive font size */
+    margin-bottom: calc(10px + 0.5vw); /* Responsive margin */
+}
+
+.safety-item p {
+    font-size: calc(14px + 0.5vw); /* Responsive font size */
+    margin: 0;
+}
+
+/* Hover effect for safety-item */
+.safety-item:hover {
+    transform: translateY(calc(10px + 1vw)) scale(1.05); /* Lift and slightly enlarge the item */
+    background-color: #1c1c1c; /* Darken background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+    filter: brightness(1.2); /* Brighten the item */
+}
+
+/* Additional hover effect for image */
+.safety-item:hover img {
+    transform: scale(1.1) rotate(5deg); /* Scale and rotate the image */
+}
+
+.central-text {
+    text-align: center;
+    font-size: calc(24px + 1vw); /* Responsive font size */
+    font-weight: bold;
+    margin: calc(20px + 1vw) 0; /* Responsive margin */
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+}
