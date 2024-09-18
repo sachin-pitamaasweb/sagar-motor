@@ -1,0 +1,98 @@
+/* Main container for the form */
+.contact-form-container {
+    padding: calc(2vw + 20px);
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading for the form */
+.contact-form-heading {
+    font-size: calc(1.5rem + 1vw);
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Form layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form row for first name and last name */
+.contact-form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Input fields */
+.contact-input {
+    padding: 15px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    width: 100%;
+    outline: none;
+}
+
+.contact-input.full-width {
+    width: 100%;
+}
+
+.contact-textarea {
+    padding: 15px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+    height: 150px;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
+
+/* Submit button */
+.contact-submit-button {
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Paper plane image */
+.contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form-row {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        margin-top: 20px;
+        max-width: 300px;
+    }
+
+    .contact-image img {
+        width: 200px;
+    }
+}

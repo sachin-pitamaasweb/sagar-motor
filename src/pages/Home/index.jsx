@@ -42,6 +42,12 @@ const Home = () => {
                 'Expertise in sustainable waste management, converting waste into valuable resources through advanced bio-mining and composting techniques.',
             image: require('../../assets/card/img-3.png') || 'https://picsum.photos/350/202',
         },
+        {
+            title: 'Customer Support',
+            description:
+                'Dedicated to exceptional customer service with a single-window contact system, ensuring timely and effective resolution of all customer needs.',
+            image: require('../../assets/card/img-4.png') || 'https://picsum.photos/350/203',
+        },
     ];
 
     const settings = {
@@ -58,7 +64,7 @@ const Home = () => {
             {
                 breakpoint: 1024, // Tablet view
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false,

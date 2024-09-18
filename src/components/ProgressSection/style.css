@@ -1,0 +1,77 @@
+/* Container for the entire section */
+.progress-section {
+    padding: calc(2vw + 20px); /* Responsive padding based on viewport width */
+    color: white;
+  }
+  
+  /* Container for the text content */
+  .text-container {
+    max-width: 100%;
+  }
+  
+  /* Heading styles */
+  .text-container h2 {
+    font-size: calc(1.5vw + 16px); /* Dynamic font size based on viewport width */
+    font-weight: bold;
+    margin-bottom: calc(1vw + 10px); /* Dynamic margin */
+  }
+  
+  /* Paragraph styles */
+  .text-container p {
+    font-size: calc(1vw + 12px); /* Dynamic paragraph font size */
+    line-height: 1.6;
+    color: #bfbfbf;
+  }
+  
+  /* Styles for highlighting text */
+  .text-container strong {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Container for the image */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image styles */
+  .image {
+    width: calc(15vw + 100px); /* Dynamic image size */
+    height: calc(15vw + 100px); /* Dynamic image size */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image is cropped properly if necessary */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .text-container h2 {
+      font-size: calc(3vw + 14px); /* Adjust the font size for smaller screens */
+    }
+  
+    .text-container p {
+      font-size: calc(2vw + 10px); /* Adjust the paragraph size for smaller screens */
+    }
+  
+    .image {
+      width: calc(20vw + 100px);
+      height: calc(20vw + 100px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-container h2 {
+      font-size: calc(4vw + 12px); /* Further scaling for very small screens */
+    }
+  
+    .text-container p {
+      font-size: calc(3vw + 8px);
+    }
+  
+    .image {
+      width: calc(25vw + 80px);
+      height: calc(25vw + 80px);
+    }
+  }
+  

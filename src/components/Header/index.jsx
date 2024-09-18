@@ -50,7 +50,7 @@ function Header() {
                 </Typography>
               </Box>
               <List className="list">
-                <ListItem button component={Link} to="/home" onClick={toggleDrawer(false)}>
+                <ListItem button component={Link} to="/" onClick={toggleDrawer(false)}>
                   <ListItemText primary="Home" />
                 </ListItem>
                 <ListItem button component={Link} to="/about" onClick={toggleDrawer(false)}>

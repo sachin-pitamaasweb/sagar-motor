@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111; /* Dark background */
     color: white; /* White text */
     padding: 5vw; /* Responsive padding */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */

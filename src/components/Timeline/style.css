@@ -1,0 +1,141 @@
+:root {
+    --bg-color: #1a1a2e;
+    --text-color: #ffffff;
+    --primary-color: #0f3460;
+    --secondary-color: #e94560;
+    --accent-color: #16213e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* H1 heading with text aligned to the left and dynamic font size */
+.timeline-heading {
+    text-align: left; /* Align text to the left */
+    font-size: calc(1.5vw + 20px); /* Font size dynamically adjusts based on viewport width */
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+    background: var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--text-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item.odd {
+    justify-self: end;
+    text-align: right;
+}
+
+.timeline-item.odd::before {
+    left: -10px;
+}
+
+.timeline-item.even {
+    justify-self: start;
+}
+
+.timeline-item.even::before {
+    right: -10px;
+}
+
+.year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        justify-self: start;
+        text-align: left;
+    }
+
+    .timeline-item::before {
+        left: -10px;
+    }
+
+    .timeline-item.odd {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-heading {
+        font-size: calc(2vw + 16px); /* Smaller screens adjust the heading size further */
+    }
+
+    .timeline-item {
+        padding: 0.8rem;
+    }
+
+    .year {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
