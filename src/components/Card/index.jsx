@@ -12,7 +12,7 @@ const Card = ({ title, description, image }) => {
 
     return (
         <>
-            <div className="card-container-motion">
+            <div className="card-container-motion-home">
                 <motion.div
                     ref={ref}
                     className="horizontal-card"
@@ -20,10 +20,10 @@ const Card = ({ title, description, image }) => {
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className="card-image-container">
-                        <img src={image} alt={title} className="card-image" />
+                    <div className="card-image-container-home">
+                        <img src={image} alt={title} className="card-image-home" />
                     </div>
-                    <div className="card-content">
+                    <div className="card-content-home">
                         <h3>{title}</h3>
                         <p>{description}</p>
                     </div>
