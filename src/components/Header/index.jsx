@@ -56,9 +56,9 @@ function Header() {
                 <ListItem button component={Link} to="/about" onClick={toggleDrawer(false)}>
                   <ListItemText primary="About Us" />
                 </ListItem>
-                <ListItem button component={Link} to="/infrastructure" onClick={toggleDrawer(false)}>
+                {/* <ListItem button component={Link} to="/infrastructure" onClick={toggleDrawer(false)}>
                   <ListItemText primary="Infrastructure" />
-                </ListItem>
+                </ListItem> */}
                 <ListItem button component={Link} to="/projects" onClick={toggleDrawer(false)}>
                   <ListItemText primary="Projects" />
                 </ListItem>

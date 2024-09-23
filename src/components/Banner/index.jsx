@@ -15,7 +15,7 @@ function Banner({ mediaType, mediaSource, altText }) {
             )}
             <div className="overlay"></div>
             <div className="banner-content">
-                <div className="banner-text">
+                <div className="banner-text" >
                     <h1 className="banner-title">Innovating <span className='banner-title-span'>MOBILITY</span>, Sustaining the <span className='banner-title-span'>FUTURE</span></h1>
                     <p className="banner-description">Connecting Communities Through Quality Vehicles and Sustainable Solutions</p>
                     <button className="learn-more">Learn More</button>

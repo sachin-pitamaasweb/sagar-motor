@@ -106,7 +106,7 @@ const Home = () => {
                     ))}
                 </Slider>
             </div>
-            <h1 className="main-title" style={{ textAlign: 'center', margin:'0px' }}>
+            <h1 className="main-title" style={{ textAlign: 'center', margin: '0px' }}>
                 Your Trusted Partner, Always Within Reach
             </h1>
             <ReachUs />
