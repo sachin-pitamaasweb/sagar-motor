@@ -137,7 +137,6 @@
 
 @media screen and (max-width: 768px) {
   .project-image {
-    width: 89%;
     height: calc(8rem + 9vw);
     object-fit: cover;
     border-radius: calc(0.5rem + 0.5vw);
