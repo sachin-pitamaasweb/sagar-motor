@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // Stop loading after 5 seconds or when assets are loaded
-    }, 5000); // Set this duration to your desired loading time (5s here)
+    }, 1000); // Set this duration to your desired loading time (5s here)
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
