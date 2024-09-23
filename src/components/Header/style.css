@@ -40,10 +40,12 @@
 }
 
 .drawerBox {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full height */
+  height: 100vh;
+  /* Full height */
+  background-color: #2a2a2a;
 }
 
 .drawerContent {
