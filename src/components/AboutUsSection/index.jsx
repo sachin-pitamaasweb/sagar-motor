@@ -16,7 +16,7 @@ const AboutUsSection = () => {
                 <Grid item xs={12} sm={4}>
                     <Box className="feature">
                         <img
-                            src={require("../../assets/aboutus/img-1.png") || "https://via.placeholder.com/200"}
+                            src={require("../../assets/aboutus/img-1.gif") || "https://via.placeholder.com/200"}
                             alt="Customer Satisfaction"
                             className="feature-icon"
                         />
@@ -31,7 +31,7 @@ const AboutUsSection = () => {
                 <Grid item xs={12} sm={4}>
                     <Box className="feature">
                         <img
-                            src={require("../../assets/aboutus/img-2.png") || "https://via.placeholder.com/200"}
+                            src={require("../../assets/aboutus/img-2.gif") || "https://via.placeholder.com/200"}
                             alt="Innovation"
                             className="feature-icon"
                         />
@@ -46,7 +46,7 @@ const AboutUsSection = () => {
                 <Grid item xs={12} sm={4}>
                     <Box className="feature">
                         <img
-                            src={require("../../assets/aboutus/img-3.png") || "https://via.placeholder.com/200"}
+                            src={require("../../assets/aboutus/img-3.gif") || "https://via.placeholder.com/200"}
                             alt="Community Development"
                             className="feature-icon"
                         />

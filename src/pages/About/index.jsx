@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import Banner from "../../components/Banner";
 import ProgressSection from "../../components/ProgressSection";
@@ -19,6 +20,12 @@ const About = () => {
     };
     return (
         <>
+            <Helmet>
+                <title>About Us - Sagar Motors</title>
+                <meta name="description" content="Learn about Sagar Motors, authorized dealers for Ashok Leyland and Honda 2-Wheelers, and pioneers in solid waste management since 1999." />
+                <meta name="keywords" content="Sagar Motors, About Us, Ashok Leyland, Honda 2-Wheelers, waste management, history" />
+                <meta name="author" content="Sagar Motors" />
+            </Helmet>
             <Banner
                 mediaType={mediaType}
                 mediaSource={mediaSource}

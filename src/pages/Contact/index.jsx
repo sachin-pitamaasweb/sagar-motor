@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Banner from '../../components/Banner';
 import ContactInfo from '../../components/ContactInfo';
@@ -10,6 +11,12 @@ const Contact = () => {
     const altText = 'Sagar Motor Banner';
     return (
         <>
+         <Helmet>
+                <title>Contact Us - Sagar Motors</title>
+                <meta name="description" content="Get in touch with Sagar Motors for inquiries, support, and information about our services." />
+                <meta name="keywords" content="Sagar Motors, Contact, customer support, inquiries" />
+                <meta name="author" content="Sagar Motors" />
+            </Helmet>
             <Banner
                 mediaType={mediaType}
                 mediaSource={mediaSource}

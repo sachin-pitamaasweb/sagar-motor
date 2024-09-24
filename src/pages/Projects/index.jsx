@@ -1,4 +1,6 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import Banner from '../../components/Banner';
 import ProgressSection from "../../components/ProgressSection";
 import ProjectCard from "../../components/ProjectCard";
@@ -16,6 +18,12 @@ const Projects = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Our Projects - Sagar Motors</title>
+                <meta name="description" content="Explore Sagar Motors' key projects that showcase our commitment to excellence in the automotive and environmental sectors." />
+                <meta name="keywords" content="Sagar Motors, Projects, automotive, environmental, solid waste management" />
+                <meta name="author" content="Sagar Motors" />
+            </Helmet>
             <Banner
                 mediaType={mediaType}
                 mediaSource={mediaSource}
@@ -28,7 +36,7 @@ const Projects = () => {
                 reverse={false}
                 headingSize="h2"
             />
-           <ProjectCard />
+            <ProjectCard />
         </>
     );
 };

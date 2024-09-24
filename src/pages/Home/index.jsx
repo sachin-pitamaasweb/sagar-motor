@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // slick
 import Slider from "react-slick";
@@ -85,6 +86,12 @@ const Home = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Sagar Motors - Leading Automotive & Environmental Company</title>
+                <meta name="description" content="Sagar Motors is an authorized dealer of Ashok Leyland and Honda 2-Wheelers, specializing in waste management and community development." />
+                <meta name="keywords" content="Sagar Motors, automotive, environmental, Ashok Leyland, Honda 2-Wheelers, waste management" />
+                <meta name="author" content="Sagar Motors" />
+            </Helmet>
             <Banner
                 mediaType={mediaType}
                 mediaSource={mediaSource}
