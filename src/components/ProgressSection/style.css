@@ -38,7 +38,7 @@
   
   /* Image styles */
   .image {
-    width: calc(15vw + 100px); /* Dynamic image size */
+    width: calc(15vw + 210px); /* Dynamic image size */
     height: calc(15vw + 100px); /* Dynamic image size */
     border-radius: 10px;
     object-fit: cover; /* Ensures the image is cropped properly if necessary */

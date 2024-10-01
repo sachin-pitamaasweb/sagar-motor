@@ -16,7 +16,7 @@ const About = () => {
     const progressData1 = {
         title: 'From Roads to Progress Since 1999',
         content: 'Founded in 1999, Sagar Motors started as a humble highway repair center, driven by a passion for vehicles and a commitment to service. Today, we are a trusted name as authorized dealers for Ashok Leyland and Honda 2-Wheelers, and pioneers in solid waste management, delivering innovative solutions. Our journey reflects growth, innovation, and a strong commitment to sustainability.',
-        imageUrl: 'https://via.placeholder.com/200',
+        imageUrl:  require('../../assets/aboutus/pic.jpg') || 'https://via.placeholder.com/200',
     };
     return (
         <>

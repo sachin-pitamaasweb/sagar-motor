@@ -8,35 +8,35 @@
 //     description: "Ongoing project managing solid waste collection and bio-mining across Latur, with a total project value of ₹117.35 Cr. This initiative ensures efficient waste processing and environmental sustainability.",
 //     status: "ON-GOING PROJECT",
 //     statusClass: "status-ongoing",
-//     image: require("../../assets/Projects/img-1.png") || "https://via.placeholder.com/220x150"
+//     image: require("../../assets/Projects/img-1.jpg") || "https://via.placeholder.com/220x150"
 //   },
 //   {
 //     title: "Telangana Bio-Mining",
 //     description: "Leading bio-mining efforts in 28 ULB clusters across Telangana, with a total project value of ₹85 Cr. We employ cutting-edge technology to process legacy waste and promote sustainability.",
 //     status: "LOI RECEIVED",
 //     statusClass: "status-received",
-//     image: require("../../assets/Projects/img-2.png") || "https://via.placeholder.com/220x150"
+//     image: require("../../assets/Projects/img-2.jpg") || "https://via.placeholder.com/220x150"
 //   },
 //   {
 //     title: "Solapur Waste Management",
 //     description: "Implementing comprehensive bio-mining and waste management strategies in Solapur, contributing to a cleaner and greener city with a total project value of ₹24 Cr.",
 //     status: "ON-GOING PROJECT",
 //     statusClass: "status-ongoing",
-//     image: require("../../assets/Projects/img-3.png") || "https://via.placeholder.com/220x150"
+//     image: require("../../assets/Projects/img-3.jpg") || "https://via.placeholder.com/220x150"
 //   },
 //   {
 //     title: "Ludhiana Bio-Mining",
 //     description: "Ongoing bio-mining project in Ludhiana, focused on legacy waste processing with a total project value of ₹26.5 Cr. This project transforms waste into valuable resources, driving environmental change.",
 //     status: "ON-GOING PROJECT",
 //     statusClass: "status-ongoing",
-//     image: require("../../assets/Projects/img-4.png") || "https://via.placeholder.com/220x150"
+//     image: require("../../assets/Projects/img-4.jpg") || "https://via.placeholder.com/220x150"
 //   },
 //   {
 //     title: "Nadiyala & Adoni Bio-Mining",
 //     description: "Active bio-mining projects in Nadiyala and Adoni, driving environmental change through sustainable waste management solutions with total project values of ₹4.3 Cr. and ₹2.5 Cr. respectively.",
 //     status: "ON-GOING PROJECT",
 //     statusClass: "status-ongoing",
-//     image: require("../../assets/Projects/img-5.png") || "https://via.placeholder.com/220x150"
+//     image: require("../../assets/Projects/img-5.jpg") || "https://via.placeholder.com/220x150"
 //   }
 // ];
 
@@ -106,7 +106,7 @@ const projects = [
     ),
     status: "ON-GOING PROJECT",
     statusClass: "status-ongoing",
-    image: require("../../assets/Projects/img-1.png") || "https://via.placeholder.com/220x150"
+    image: require("../../assets/Projects/img-1.jpg") || "https://via.placeholder.com/220x150"
   },
   {
     title: "Telangana Bio-Mining",
@@ -117,7 +117,7 @@ const projects = [
     ),
     status: "LOI RECEIVED",
     statusClass: "status-received",
-    image: require("../../assets/Projects/img-2.png") || "https://via.placeholder.com/220x150"
+    image: require("../../assets/Projects/img-2.jpg") || "https://via.placeholder.com/220x150"
   },
   {
     title: "Solapur Waste Management",
@@ -128,7 +128,7 @@ const projects = [
     ),
     status: "ON-GOING PROJECT",
     statusClass: "status-ongoing",
-    image: require("../../assets/Projects/img-3.png") || "https://via.placeholder.com/220x150"
+    image: require("../../assets/Projects/img-3.jpg") || "https://via.placeholder.com/220x150"
   },
   {
     title: "Ludhiana Bio-Mining",
@@ -139,7 +139,7 @@ const projects = [
     ),
     status: "ON-GOING PROJECT",
     statusClass: "status-ongoing",
-    image: require("../../assets/Projects/img-4.png") || "https://via.placeholder.com/220x150"
+    image: require("../../assets/Projects/img-4.jpg") || "https://via.placeholder.com/220x150"
   },
   {
     title: "Nadiyala & Adoni Bio-Mining",
@@ -150,7 +150,7 @@ const projects = [
     ),
     status: "ON-GOING PROJECT",
     statusClass: "status-ongoing",
-    image: require("../../assets/Projects/img-5.png") || "https://via.placeholder.com/220x150"
+    image: require("../../assets/Projects/img-5.jpg") || "https://via.placeholder.com/220x150"
   }
 ];
 
