@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
   --accent-color: #4a90e2;
@@ -27,7 +27,7 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: calc(30vw + 105px);
+  height: calc(30vw + 200px);
 }
 
 .project-card-component:hover {
@@ -57,4 +57,122 @@
 .project-description-project {
   font-size: calc(0.9vw + 10px);
   color: #cccccc;
+} */
+
+
+body {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 300;
+  margin: 0;
+  overflow-x: hidden;
+}
+h1, h2 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.container {
+  width: 500%; /* 5 panels */
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.panel {
+  min-width: 100vw; /* Each panel takes the full width of the viewport */
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: center;
+  font-weight: 300;
+  color: white;
+  position: relative;
+  padding: 0 20px; /* Padding for mobile devices */
+  box-sizing: border-box;
+}
+.card {
+  background-color: white;
+  color: black;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  padding: 20px;
+  height: 576px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 575px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column; /* Stack title and description */
+}
+.card-content h2 {
+  font-size: calc(5vw + 16px);
+  margin: 0px;
+  color: #333;
+}
+.card-content p {
+  font-size: calc(3vw + 12px);
+  color: #333;
+  margin: 0px;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .card-content h2 {
+    font-size: 18px;
+  }
+  .card-content p {
+    font-size: 12px;
+  }
+}
+
+@media ( min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 300%;
+  }
+  .panel {
+    padding: 0 10px;
+  }
+  .card img {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .card-content h2 {
+    font-size: 20px;
+  }
+  .card-content p {
+    font-size: 14px;
+  }
+}
+
+@media ( min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 200%;
+  }
+  .panel {
+    padding: 0 10px;
+  }
+  .card img {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .card-content h2 {
+    font-size: 20px;
+  }
+  .card-content p {
+    font-size: 14px;
+  }
 }
