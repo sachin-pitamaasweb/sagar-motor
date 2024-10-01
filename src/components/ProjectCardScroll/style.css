@@ -1,0 +1,175 @@
+body {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* Container for the panels */
+.container {
+    width: 500%;
+    /* Adjust width based on the number of panels */
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+/* Each panel styling */
+.panel {
+    min-width: 100vw;
+    /* Each panel takes the full width of the viewport */
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    font-weight: 300;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+    /* Padding for mobile devices */
+    box-sizing: border-box;
+}
+
+/* Card styling */
+.card {
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    /* Align items in a row */
+    padding: 20px;
+    height: clamp(400px, 60vh, 700px);
+    /* Dynamic card height between 400px and 700px */
+    transition: height 0.3s ease-in-out;
+    /* Smooth transition for height */
+}
+
+/* Card image styling */
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 575px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Card content styling */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack title and description */
+}
+
+/* Dynamic font sizes for card content */
+.card-content h2 {
+    font-size: clamp(26px, 5vw + 18px, 46px);
+    margin: 0px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.card-content h5 {
+    font-size: clamp(23px, 2vw + 18px, 39px);
+    margin: 0px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.card-content p {
+    font-size: clamp(50px, 5vw + 42px, 26px);
+    /* Dynamic font size between 16px and 36px */
+    color: #fff;
+    margin: 0px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+}
+
+/* Responsive adjustments for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 300%;
+        /* Adjust width for fewer panels on tablet screens */
+    }
+
+    .panel {
+        padding: 0 10px;
+        /* Less padding on mobile */
+    }
+
+    .card img {
+        max-width: 100%;
+        /* Image fills the card on mobile */
+        margin-right: 0;
+        /* Remove margin on mobile */
+    }
+
+    .card-content h2 {
+        font-size: 20px;
+        /* Smaller heading on mobile */
+    }
+
+    .card-content p {
+        font-size: 14px;
+        /* Smaller text on mobile */
+    }
+}
+
+/* Responsive adjustments for larger tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 200%;
+        /* Adjust width for fewer panels on larger tablets */
+    }
+
+    .panel {
+        padding: 0 10px;
+        /* Less padding */
+    }
+
+    .card img {
+        max-width: 100%;
+        /* Image fills the card */
+        margin-right: 0;
+        /* Remove margin */
+    }
+
+    .card-content h2 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+}

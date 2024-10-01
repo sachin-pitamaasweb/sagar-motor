@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-
-// slick
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 // components
 import Banner from '../../components/Banner';
@@ -13,17 +10,38 @@ import ProfileSection from '../../components/ProfileSection';
 import Card from '../../components/Card';
 import ProjectShowcase from '../../components/ProjectShowcase';
 import SafetyGrid from '../../components/SafetyGrid';
+import ProjectCardScroll from '../../components/ProjectCardScroll';
+import ReachUs from '../../components/ReachUs';
 
 // style
 import './style.css';
-import ReachUs from '../../components/ReachUs';
+
+// Custom hook to detect screen size
+const useMediaQuery = (query) => {
+    const [matches, setMatches] = useState(window.matchMedia(query).matches);
+
+    useEffect(() => {
+        const media = window.matchMedia(query);
+        if (media.matches !== matches) {
+            setMatches(media.matches);
+        }
+        const listener = () => setMatches(media.matches);
+        media.addListener(listener);
+        return () => media.removeListener(listener);
+    }, [matches, query]);
+
+    return matches;
+};
 
 const Home = () => {
     const mediaType = 'video';
     const mediaSource = 'https://res.cloudinary.com/dtivafy25/video/upload/v1725711523/Video_1_ahdqvj.mp4';
     const altText = 'Sagar Motor Banner';
+    const title = "Driving Innovation, Creating the FUTURE";
+    const description = "We build vehicles that drive communities forward, sustainably.";
+    const buttonText = "Explore Now"
 
-
+    // Card data
     const data = [
         {
             title: 'Automotive Dealership',
@@ -51,11 +69,12 @@ const Home = () => {
         },
     ];
 
+    // Slider settings
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1, // Default: Show 3 cards on larger screens
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -63,7 +82,7 @@ const Home = () => {
         centerMode: false,
         responsive: [
             {
-                breakpoint: 1024, // Tablet view
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -72,7 +91,7 @@ const Home = () => {
                 },
             },
             {
-                breakpoint: 768, // Mobile view
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -83,6 +102,9 @@ const Home = () => {
         ],
     };
 
+    // Detect device size
+    const isTabletOrMobile = useMediaQuery('(max-width: 1024px)');
+    const isDesktop = useMediaQuery('(min-width: 1025px)');
 
     return (
         <>
@@ -96,22 +118,29 @@ const Home = () => {
                 mediaType={mediaType}
                 mediaSource={mediaSource}
                 altText={altText}
+                title={title}
+                description={description}
+                buttonText={buttonText}
             />
             <ProfileSection />
             <ProjectShowcase />
             <SafetyGrid />
             <div className="card-container">
                 <h2 className="main-title">Our Commitment to Excellence</h2>
-                <Slider {...settings} >
-                    {data.map((item, index) => (
-                        <Card
-                            key={index}
-                            title={item.title}
-                            description={item.description}
-                            image={item.image}
-                        />
-                    ))}
-                </Slider>
+                {/* Conditional rendering based on screen size */}
+                {isTabletOrMobile && (
+                    <Slider {...settings}>
+                        {data.map((item, index) => (
+                            <Card
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                image={item.image}
+                            />
+                        ))}
+                    </Slider>
+                )}
+                {isDesktop && <ProjectCardScroll />}
             </div>
             <h1 className="main-title" style={{ textAlign: 'center', margin: '0px' }}>
                 Your Trusted Partner, Always Within Reach

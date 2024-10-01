@@ -1,6 +1,10 @@
-import React from 'react';
-import './style.css';
-import { Grid } from '@mui/material';
+import React, { useEffect } from 'react';
+import './style.css'; // Add any custom styles here
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
@@ -36,27 +40,42 @@ const projects = [
 ];
 
 const ProjectCard = () => {
-    return (
-        <section className="section-project-container">
-            <h1 className="section-title-project">Driving Progress Through Our Key Projects</h1>
-            <Grid container spacing={2} className="projects-grid">
-                {projects.map((project, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
-                        <div className="project-card-component">
-                            <img src={project.image} alt={project.title} className="project-image-project" />
-                            <div className="project-content-project">
-                                <h2 className="project-title-project">{project.title}</h2>
-                                <h5 className="project-budget-project"><span style={{ fontWeight: 'bold' }}>Project Value:</span>{project.budget}</h5>
-                                <p className="project-description-project">{project.description}</p>
-                            </div>
-                        </div>
-                    </Grid>
-                ))}
-            </Grid>
+  useEffect(() => {
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".container",
+        pin: true,
+        scrub: 0.1,
+        end: "+=3000"
+      }
+    });
+
+    return () => {
+      // Cleanup ScrollTrigger
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  return (
+    <div className="container" id="panelContainer">
+      {projects.map((data, index) => (
+        <section className="panel" key={index}>
+          <div className="card">
+            <img src={data.image} alt={data.title} />
+            <div className="card-content">
+              <h2>{data.title}</h2>
+              <h5>{data.budget}</h5>
+              <p>{data.description}</p>
+            </div>
+          </div>
         </section>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default ProjectCard;
-
-
