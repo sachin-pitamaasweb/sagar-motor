@@ -11,12 +11,12 @@ import './style.css';
 
 const About = () => {
     const mediaType = 'image';
-    const mediaSource = 'https://res.cloudinary.com/dtivafy25/image/upload/v1726640957/img-1_trirbe.png';
+    const mediaSource = require('../../assets/banner/img-1.png') || 'https://via.placeholder.com/200';
     const altText = 'Sagar Motor Banner';
     const progressData1 = {
         title: 'From Roads to Progress Since 1999',
         content: 'Founded in 1999, Sagar Motors started as a humble highway repair center, driven by a passion for vehicles and a commitment to service. Today, we are a trusted name as authorized dealers for Ashok Leyland and Honda 2-Wheelers, and pioneers in solid waste management, delivering innovative solutions. Our journey reflects growth, innovation, and a strong commitment to sustainability.',
-        imageUrl:  require('../../assets/aboutus/pic.jpg') || 'https://via.placeholder.com/200',
+        imageUrl: require('../../assets/aboutus/pic.jpg') || 'https://via.placeholder.com/200',
     };
     return (
         <>
@@ -25,6 +25,10 @@ const About = () => {
                 <meta name="description" content="Learn about Sagar Motors, authorized dealers for Ashok Leyland and Honda 2-Wheelers, and pioneers in solid waste management since 1999." />
                 <meta name="keywords" content="Sagar Motors, About Us, Ashok Leyland, Honda 2-Wheelers, waste management, history" />
                 <meta name="author" content="Sagar Motors" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
+
             </Helmet>
             <Banner
                 mediaType={mediaType}

@@ -113,6 +113,8 @@ const Home = () => {
                 <meta name="description" content="Sagar Motors is an authorized dealer of Ashok Leyland and Honda 2-Wheelers, specializing in waste management and community development." />
                 <meta name="keywords" content="Sagar Motors, automotive, environmental, Ashok Leyland, Honda 2-Wheelers, waste management" />
                 <meta name="author" content="Sagar Motors" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             </Helmet>
             <Banner
                 mediaType={mediaType}

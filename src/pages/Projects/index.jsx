@@ -7,7 +7,7 @@ import ProjectCard from "../../components/ProjectCard";
 
 const Projects = () => {
     const mediaType = 'image';
-    const mediaSource = 'https://res.cloudinary.com/dtivafy25/image/upload/v1726640957/img-1_trirbe.png';
+    const mediaSource = require('../../assets/banner/img-2.png') || 'https://via.placeholder.com/200';
     const altText = 'Sagar Motor Banner';
     const progressData1 = {
         title: 'Driving Progress Through Our Key Projects',
@@ -23,6 +23,9 @@ const Projects = () => {
                 <meta name="description" content="Explore Sagar Motors' key projects that showcase our commitment to excellence in the automotive and environmental sectors." />
                 <meta name="keywords" content="Sagar Motors, Projects, automotive, environmental, solid waste management" />
                 <meta name="author" content="Sagar Motors" />
+                <meta name="robots" content="index, follow" />  
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
             </Helmet>
             <Banner
                 mediaType={mediaType}

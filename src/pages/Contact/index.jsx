@@ -7,7 +7,7 @@ import ContactForm from '../../components/ContactForm';
 
 const Contact = () => {
     const mediaType = 'image';
-    const mediaSource = 'https://res.cloudinary.com/dtivafy25/image/upload/v1726640957/img-1_trirbe.png';
+    const mediaSource = require('../../assets/banner/img-3.png') || 'https://via.placeholder.com/200';
     const altText = 'Sagar Motor Banner';
     return (
         <>
@@ -16,6 +16,9 @@ const Contact = () => {
                 <meta name="description" content="Get in touch with Sagar Motors for inquiries, support, and information about our services." />
                 <meta name="keywords" content="Sagar Motors, Contact, customer support, inquiries" />
                 <meta name="author" content="Sagar Motors" />
+                <meta name="robots" content="index, follow" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="language" content="English" />
             </Helmet>
             <Banner
                 mediaType={mediaType}
