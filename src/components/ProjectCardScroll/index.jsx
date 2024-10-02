@@ -41,57 +41,27 @@ const projects = [
 ];
 
 const ProjectCard = () => {
-  // useEffect(() => {
-  //   console.log("ScrollTrigger is working..."); // Check if useEffect runs correctly
-  //   let sections = gsap.utils.toArray(".panel");
-
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length - 1),
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".container-scroll",
-  //       pin: true,
-  //       scrub: 0.1,
-  //       end: "+=3000",
-  //       markers: true, // Show markers to debug ScrollTrigger functionality
-  //     },
-  //   });
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
-
   useEffect(() => {
-    // Only execute the code if window is defined (client-side)
-    if (typeof window !== 'undefined' && gsap && ScrollTrigger) {
-      console.log("Initializing ScrollTrigger...");
+    console.log("ScrollTrigger is working..."); // Check if useEffect runs correctly
+    let sections = gsap.utils.toArray(".panel");
 
-      // Create a GSAP timeline and configure it to use ScrollTrigger
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".container-scroll",
-          pin: true,
-          scrub: 0.5, // Controls the smoothness of the scrolling animation
-          end: "+=3000", // Controls how far the animation should run
-          markers: true, // Show markers for debugging; set to false in production
-        },
-      });
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".container-scroll",
+        pin: true,
+        scrub: 0.1,
+        end: "+=3000",
+        markers: true, // Show markers to debug ScrollTrigger functionality
+      },
+    });
 
-      // Add animations to the timeline
-      timeline.to(".panel", {
-        xPercent: -100 * (projects.length - 1), // Moves each panel horizontally
-        ease: "none", // Ensures no easing effect for smooth scrolling
-        duration: 1, // Controls the duration of the animation (relative to scrub)
-      });
-    }
-
-    // Cleanup ScrollTrigger instances on component unmount
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
 
   return (
     <div className="container-scroll" id="panelContainer">
