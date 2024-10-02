@@ -15,7 +15,7 @@ const ReachUs = () => {
 
         // Simulate form submission delay
         setTimeout(() => {
-            setLoading(false); // Hide loader
+            setLoading(false);
             if (Object.keys(errors).length > 0) {
                 setMessage('Please correct the errors in the form.');
                 setSeverity('error');
