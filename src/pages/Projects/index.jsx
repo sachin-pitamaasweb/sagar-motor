@@ -12,7 +12,7 @@ const Projects = () => {
     const progressData1 = {
         title: 'Driving Progress Through Our Key Projects',
         content: 'At Sagar Motors, we take pride in our diverse and impactful projects across the automotive and environmental sectors. From providing top-tier vehicle services to addressing solid waste management challenges, each project is a testament to our commitment to excellence and sustainability.',
-        imageUrl: 'https://via.placeholder.com/200',
+        imageUrl:  require('../../assets/aboutus/pic.jpg') || 'https://via.placeholder.com/200',
     };
 
 

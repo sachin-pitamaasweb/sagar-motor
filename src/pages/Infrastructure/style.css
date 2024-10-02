@@ -1,0 +1,171 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Infrastructure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.Infrastructure-title,
+.Infrastructure-facility-title {
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-title {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.Infrastructure-facility-title {
+  font-size: 1.8rem;
+}
+
+.Infrastructure-facility-description {
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Infrastructure-facility-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-badge:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  transform: scale(1.1); /* Scale up the badge slightly */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3); /* Add a soft white shadow */
+}
+
+/* Create a shimmer effect animation on hover */
+.Infrastructure-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+  transform: skewX(-20deg); /* Skew to create the shimmer effect */
+}
+
+/* Animate the shimmer effect on hover */
+.Infrastructure-badge:hover::after {
+  left: 200%;
+}
+
+/* Adding a bounce effect on hover */
+.Infrastructure-badge:hover {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.15);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
+.Infrastructure-card {
+  background-color: #111;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-card:hover {
+  background-color: #222;
+}
+
+.Infrastructure-card-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.Infrastructure-highlights {
+  background-color: #111;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-highlights ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.Infrastructure-highlights li {
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-presence {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Infrastructure-team-card {
+  background-color: #111;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@media (min-width: 768px) {
+  .Infrastructure-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Infrastructure-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

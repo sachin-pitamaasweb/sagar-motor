@@ -15,7 +15,7 @@ h2 {
 }
 
 /* Container for the panels */
-.container {
+.container-scroll {
     width: 500%;
     /* Adjust width based on the number of panels */
     height: 100vh;

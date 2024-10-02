@@ -1,12 +1,8 @@
 .appBar {
   background-color: transparent !important;
-  /* Transparent background */
   box-shadow: none;
-  /* Remove shadow */
-  color: #FFFFFF !important;
-  /* White color */
+  color: #ffffff !important;
   padding: 10px 0px 0px 0px !important;
-  /* Remove padding */
 }
 
 .toolbar {
@@ -17,8 +13,7 @@
 }
 
 .menuButton {
-  color: #FFFFFF !important;
-  /* White color for the menu icon */
+  color: #ffffff !important;
 }
 
 .menuIcon {
@@ -26,17 +21,11 @@
 }
 
 .websiteName {
-  color: #FFFFFF !important;
-  /* White color for the website name */
+  color: #ffffff !important;
   font-weight: 800 !important;
   text-transform: uppercase;
   font-size: 40px !important;
   font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
-}
-
-.css-j400xw-MuiPaper-root-MuiDrawer-paper {
-  background-color: black !important;
-  color: #FFFFFF !important;
 }
 
 .drawerBox {
@@ -44,13 +33,11 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* Full height */
   background-color: #2a2a2a;
 }
 
 .drawerContent {
   flex-grow: 1;
-  /* Ensures that the content above the social icons takes up available space */
 }
 
 .drawerHeader {
@@ -63,31 +50,26 @@
 
 .drawerTitle {
   flex-grow: 1;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: right;
   font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
   font-size: calc(16px + 1vw) !important;
 }
 
 .backButton {
-  color: #FFF;
-  /* Back button color */
+  color: #ffffff;
   margin: 16px;
 }
 
 .list {
   text-align: center !important;
-  /* Center the list items */
 }
 
 .list .MuiListItemText-primary {
-  color: #fff !important;
-  /* Text color */
+  color: #ffffff !important;
   font-size: calc(16px + 1vw) !important;
-  /* Responsive font size */
   font-weight: 400 !important;
   font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE', sans-serif !important;
-  text-align: center;
 }
 
 .list .MuiListItemText-primary:hover {
@@ -102,14 +84,13 @@
 }
 
 .socialIcons .MuiIconButton-root {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 40px;
 }
 
 @media (max-width: 600px) {
   .websiteName {
     font-size: 1rem !important;
-    /* Smaller text on mobile */
   }
 
   .menuIcon {
@@ -118,18 +99,15 @@
 
   .toolbar {
     padding: 0 10px;
-    /* Less padding on mobile */
   }
 }
 
 @media (min-width: 601px) {
   .websiteName {
     font-size: 1.5rem;
-    /* Larger text on desktop */
   }
 
   .toolbar {
     padding: 0 40px;
-    /* More padding on larger screens */
   }
 }

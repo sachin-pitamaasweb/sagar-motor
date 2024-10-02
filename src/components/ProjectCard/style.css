@@ -27,7 +27,7 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: calc(30vw + 200px);
+  /* height: calc(30vw + 200px); */
 }
 
 .project-card-component:hover {
@@ -58,4 +58,5 @@
   font-size: calc(0.9vw + 10px);
   color: #cccccc;
 } 
+
 
