@@ -5,7 +5,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
+console.log("GSAP version:", gsap.version); // Check if GSAP is correctly imported
+console.log("ScrollTrigger is registered:", ScrollTrigger);
 const projects = [
   {
     title: 'Latur Solid Waste Management',
@@ -41,25 +42,26 @@ const projects = [
 
 const ProjectCard = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      let sections = gsap.utils.toArray(".panel");
+    console.log("ScrollTrigger is working..."); // Check if useEffect runs correctly
+    let sections = gsap.utils.toArray(".panel");
 
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".container-scroll",
-          pin: true,
-          scrub: 0.1,
-          end: "+=3000",
-        },
-      });
-    }
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".container-scroll",
+        pin: true,
+        scrub: 0.1,
+        end: "+=3000",
+        markers: true, // Show markers to debug ScrollTrigger functionality
+      },
+    });
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
 
   return (
     <div className="container-scroll" id="panelContainer">
