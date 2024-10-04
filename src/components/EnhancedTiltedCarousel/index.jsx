@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './style.css';
 
 // Updated Image URLs (using larger placeholders for illustration purposes)
 const images = [
-   require("../../assets/Projects/img-1.png") || "https://via.placeholder.com/1000x600?text=1",
-   require("../../assets/Projects/img-2.png") || "https://via.placeholder.com/1000x600?text=2",
-   require("../../assets/Projects/img-3.png") ||"https://via.placeholder.com/1000x600?text=3",
-   require("../../assets/Projects/img-4.png") ||"https://via.placeholder.com/1000x600?text=4",
-   require("../../assets/Projects/img-5.png") ||"https://via.placeholder.com/1000x600?text=5",
+  require("../../assets/Projects/img-1.png") || "https://via.placeholder.com/1000x600?text=1",
+  require("../../assets/Projects/img-2.png") || "https://via.placeholder.com/1000x600?text=2",
+  require("../../assets/Projects/img-3.png") ||"https://via.placeholder.com/1000x600?text=3",
+  require("../../assets/Projects/img-4.png") ||"https://via.placeholder.com/1000x600?text=4",
+  require("../../assets/Projects/img-5.png") ||"https://via.placeholder.com/1000x600?text=5",
 ];
 
 export default function EnhancedTiltedCarousel() {
@@ -27,8 +29,22 @@ export default function EnhancedTiltedCarousel() {
     return index;
   };
 
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <div className="EnhancedCarousel-container">
+      {/* Left Arrow Button */}
+      <button className="arrow left-arrow" onClick={goToPrevious}>
+        <ArrowBackIosIcon fontSize="large" />
+      </button>
+
+      {/* Carousel Content */}
       <div className="EnhancedCarousel-inner">
         <AnimatePresence initial={false}>
           {[-2, -1, 0, 1, 2].map((offset) => {
@@ -72,6 +88,11 @@ export default function EnhancedTiltedCarousel() {
           })}
         </AnimatePresence>
       </div>
+
+      {/* Right Arrow Button */}
+      <button className="arrow right-arrow" onClick={goToNext}>
+        <ArrowForwardIosIcon fontSize="large" />
+      </button>
     </div>
   );
 }

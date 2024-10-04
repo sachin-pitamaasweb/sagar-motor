@@ -48,12 +48,13 @@ const ProjectCard = () => {
     gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: "none",
+
       scrollTrigger: {
         trigger: ".container-scroll",
         pin: true,
         scrub: 0.1,
         end: "+=3000",
-        markers: true, // Show markers to debug ScrollTrigger functionality
+        markers: false, 
       },
     });
 

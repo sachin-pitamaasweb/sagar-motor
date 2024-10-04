@@ -1,12 +1,17 @@
 .contact-info-container {
-    padding: calc(2vw + 20px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Align sections in a row */
+    justify-content: center; /* Center all items */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    padding: calc(2vw + 20px);
     color: #ffffff;
+    gap: 100px;
 }
 
 .contact-info-section {
-    margin-bottom: 40px;
+    margin: 20px; /* Space between sections */
+    text-align: center; /* Center text */
 }
 
 .contact-label {
@@ -22,10 +27,15 @@
     color: #ffffff;
 }
 
-/* Media query for smaller devices */
+/* Media query for tablets and smaller devices */
 @media (max-width: 768px) {
     .contact-info-container {
+        flex-direction: column; /* Stack sections in a column */
         padding: 20px;
+    }
+
+    .contact-info-section {
+        margin: 10px 0; /* Less space between sections */
     }
 
     .contact-label {
@@ -34,5 +44,12 @@
 
     .contact-value {
         font-size: 1.5rem;
+    }
+}
+
+/* Media query for very small devices */
+@media (max-width: 480px) {
+    .contact-value {
+        font-size: 1.2rem;
     }
 }
