@@ -35,7 +35,7 @@ const useMediaQuery = (query) => {
 
 const Home = () => {
     const mediaType = 'video';
-    const mediaSource = 'https://res.cloudinary.com/dtivafy25/video/upload/v1725711523/Video_1_ahdqvj.mp4';
+    const mediaSource = 'https://res.cloudinary.com/dtivafy25/video/upload/v1728546114/Sagar_motor_-_Made_with_Clipchamp_1_.mp4_Compssssss_mi3hff.mp4';
     const altText = 'Sagar Motor Banner';
     const title = "Driving Innovation, Creating the FUTURE";
     const description = "We build vehicles that drive communities forward, sustainably.";
