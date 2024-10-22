@@ -24,7 +24,8 @@ const Footer = () => {
           <nav className="footer-links">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>HOME</Link>
             <Link to="/about" onClick={() => window.scrollTo(0, 0)}>ABOUT US</Link>
-            <Link to="/project" onClick={() => window.scrollTo(0, 0)}>PROJECT</Link>
+            <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>PROJECT</Link>
+            <Link to="/infrastructure" onClick={() => window.scrollTo(0, 0)}>INFRASTRUCTURE</Link>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>CONTACT US</Link>
           </nav>
         </div>
