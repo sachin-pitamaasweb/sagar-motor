@@ -30,7 +30,7 @@ function HomeBanner({ banners }) {
         <div className="banner">
             {/* Render video or image based on the mediaType prop */}
             {mediaType === 'video' ? (
-                <video className="banner-media" autoPlay muted loop playsInline>
+                <video className="banner-media" autoPlay muted loop playsInline preload="auto">
                     <source src={mediaSource} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
