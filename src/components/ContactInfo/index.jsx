@@ -11,7 +11,13 @@ const ContactInfo = () => {
 
             <div className="contact-info-section">
                 <p className="contact-label">ADDRESS</p>
-                <p className="contact-value">123 Main St, Springfield, USA</p>
+                <p className="contact-value">
+                    Sagar Motors, Nanded Road,
+                    <br />
+                    Vivekanand Chowk, Latur 413512,
+                    <br />
+                    Maharashtra, India
+                </p>
             </div>
 
             <div className="contact-info-section">

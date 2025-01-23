@@ -96,3 +96,9 @@
         width: 200px;
     }
 }
+
+@media (max-width: 480px) {
+    .contact-form-heading {
+       text-align: center;
+    }
+}

@@ -49,6 +49,10 @@
 
 /* Media query for very small devices */
 @media (max-width: 480px) {
+    .contact-info-container {
+        gap: 0px; /* Set gap to 0 on mobile */
+    }
+
     .contact-value {
         font-size: 1.2rem;
     }
