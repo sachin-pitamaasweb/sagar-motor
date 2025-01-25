@@ -25,9 +25,9 @@ const projects = [
         image: require('../../assets/projectcard/img-3.png') || 'https://via.placeholder.com/300',
     },
     {
-        title: 'Lucknow Bio-Mining',
+        title: 'Ludhiana Bio-Mining',
         budget: '₹26.5 Cr.',
-        description: 'Advanced bio-mining operations in Lucknow, transforming waste sites and recovering valuable materials.',
+        description: 'Advanced bio-mining operations in Ludhiana, transforming waste sites and recovering valuable materials.',
         image: require('../../assets/projectcard/img-4.png') || 'https://via.placeholder.com/300',
     },
     {

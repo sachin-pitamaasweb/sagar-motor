@@ -9,35 +9,29 @@ console.log("GSAP version:", gsap.version); // Check if GSAP is correctly import
 console.log("ScrollTrigger is registered:", ScrollTrigger);
 const projects = [
   {
-    title: 'Latur Solid Waste Management',
-    budget: '₹117.35 Cr.',
-    description: 'Innovative waste management solutions for Latur, focusing on sustainable practices and environmental conservation.',
-    image: require('../../assets/Projects/img-1.png') || 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Telangana Bio-Mining',
-    budget: '₹85 Cr.',
-    description: 'Cutting-edge bio-mining techniques implemented in Telangana to extract valuable resources from waste materials.',
-    image: require('../../assets/Projects/img-2.png') || 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Solapur Waste Management',
-    budget: '₹24 Cr.',
-    description: 'Comprehensive waste management program in Solapur, addressing urban waste challenges with modern solutions.',
-    image: require('../../assets/Projects/img-3.png') || 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Lucknow Bio-Mining',
-    budget: '₹26.5 Cr.',
-    description: 'Advanced bio-mining operations in Lucknow, transforming waste sites and recovering valuable materials.',
-    image: require('../../assets/Projects/img-4.png') || 'https://via.placeholder.com/300',
-  },
-  {
-    title: 'Nashik & Akola Bio-Mining',
-    budget: '₹4.3 Cr. (Nadiyala), ₹2.5 Cr. (Adoni)',
-    description: 'Joint bio-mining initiatives in Nashik and Akola, showcasing innovative approaches to waste management and resource recovery.',
-    image: require('../../assets/Projects/img-5.png') || 'https://via.placeholder.com/300',
-  },
+    title: 'Automotive Dealership',
+    description:
+        'Authorized dealers of Ashok Leyland and Honda 2-Wheelers, providing reliable and high-performance vehicles across multiple districts.',
+    image: require('../../assets/card/img-1.png') || 'https://picsum.photos/350/200'
+},
+{
+    title: 'Solid Waste Management',
+    description:
+        'Pioneering bio-mining and waste processing solutions, managing 11,000 metric tons of legacy waste daily, ensuring a cleaner environment.',
+    image: require('../../assets/card/img-2.png') || 'https://picsum.photos/350/201',
+},
+{
+    title: 'Bio-Mining & Composting',
+    description:
+        'Expertise in sustainable waste management, converting waste into valuable resources through advanced bio-mining and composting techniques.',
+    image: require('../../assets/card/img-3.png') || 'https://picsum.photos/350/202',
+},
+{
+    title: 'Customer Support',
+    description:
+        'Dedicated to exceptional customer service with a single-window contact system, ensuring timely and effective resolution of all customer needs.',
+    image: require('../../assets/card/img-4.png') || 'https://picsum.photos/350/203',
+},
 ];
 
 const ProjectCard = () => {
