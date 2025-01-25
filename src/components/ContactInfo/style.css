@@ -1,76 +1,65 @@
-/* ContactInfo.css */
-.contact-section {
-    background-color: #18181b; /* bg-zinc-900 */
-    padding: 4rem 1rem; /* py-16 px-4 */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem; /* gap-6 */
-  }
-  
-  @media (min-width: 768px) {
-    .contact-grid {
-      grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+.contact-info-container {
+    display: flex;
+    flex-direction: row; /* Align sections in a row */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Wrap items if needed */
+    padding: calc(2vw + 20px);
+    color: #ffffff;
+    gap: 50px; /* Reduce gap for cleaner alignment */
+}
+
+.contact-info-section {
+    flex: 1; /* Ensure equal width for all sections */
+    min-width: 200px; /* Prevent sections from shrinking too much */
+    margin: 10px; /* Space between sections */
+    text-align: center; /* Center text */
+}
+
+.contact-label {
+    font-size: calc(0.8rem + 0.5vw); /* Responsive label size */
+    color: #a1a1a1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contact-value {
+    font-size: calc(1rem + 1vw); /* Responsive value size */
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .contact-info-container {
+        flex-direction: column; /* Stack sections in a column */
+        padding: 20px;
+        gap: 20px; /* Reduce gap for smaller devices */
     }
-  }
-  
-  .contact-card {
-    background-color: #27272a; /* bg-zinc-800 */
-    border: 1px solid #3f3f46; /* border-zinc-700 */
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .card-header {
-    background-color: #3f3f46; /* bg-zinc-700 */
-    padding: 0.75rem; /* py-3 */
-    flex-shrink: 0;
-    text-align: center;
-  }
-  
-  .card-title {
-    color: white;
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 500; /* font-medium */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; /* gap-2 */
-  }
-  
-  .card-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    padding: 1rem; /* p-4 */
-    text-align: center;
-  }
-  
-  .card-link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .card-link:hover {
-    color: #d4d4d8; /* hover:text-gray-300 */
-  }
-  
-  .card-text {
-    color: white;
-  }
-  
-  .icon {
-    height: 1.25rem; /* h-5 */
-    width: 1.25rem; /* w-5 */
-  }
-  
+
+    .contact-info-section {
+        text-align: center; /* Keep sections centered */
+        margin: 10px 0; /* Less space between sections */
+    }
+
+    .contact-label {
+        font-size: 1rem; /* Adjust label size */
+    }
+
+    .contact-value {
+        font-size: 1.2rem; /* Adjust value size */
+    }
+}
+
+/* Media query for very small devices */
+@media (max-width: 480px) {
+    .contact-info-container {
+        padding: 10px;
+        gap: 10px; /* Minimal gap for small devices */
+    }
+
+    .contact-value {
+        font-size: 1rem; /* Adjust for small screens */
+    }
+}
