@@ -5,38 +5,42 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-console.log("GSAP version:", gsap.version); // Check if GSAP is correctly imported
-console.log("ScrollTrigger is registered:", ScrollTrigger);
+
 const projects = [
   {
-    title: 'Automotive Dealership',
-    description:
-        'Authorized dealers of Ashok Leyland and Honda 2-Wheelers, providing reliable and high-performance vehicles across multiple districts.',
-    image: require('../../assets/card/img-1.png') || 'https://picsum.photos/350/200'
-},
-{
-    title: 'Solid Waste Management',
-    description:
-        'Pioneering bio-mining and waste processing solutions, managing 11,000 metric tons of legacy waste daily, ensuring a cleaner environment.',
-    image: require('../../assets/card/img-2.png') || 'https://picsum.photos/350/201',
-},
-{
-    title: 'Bio-Mining & Composting',
-    description:
-        'Expertise in sustainable waste management, converting waste into valuable resources through advanced bio-mining and composting techniques.',
-    image: require('../../assets/card/img-3.png') || 'https://picsum.photos/350/202',
-},
-{
-    title: 'Customer Support',
-    description:
-        'Dedicated to exceptional customer service with a single-window contact system, ensuring timely and effective resolution of all customer needs.',
-    image: require('../../assets/card/img-4.png') || 'https://picsum.photos/350/203',
-},
+    title: 'Latur Solid Waste Management',
+    budget: '₹117.35 Cr.',
+    description: 'Innovative waste management solutions for Latur, focusing on sustainable practices and environmental conservation.',
+    image: require('../../assets/projectcard/img-1.png') || 'https://via.placeholder.com/300',
+  },
+  {
+    title: 'Telangana Bio-Mining',
+    budget: '₹85 Cr.',
+    description: 'Cutting-edge bio-mining techniques implemented in Telangana to extract valuable resources from waste materials.',
+    image: require('../../assets/projectcard/img-2.png') || 'https://via.placeholder.com/300',
+  },
+  {
+    title: 'Solapur Waste Management',
+    budget: '₹24 Cr.',
+    description: 'Comprehensive waste management program in Solapur, addressing urban waste challenges with modern solutions.',
+    image: require('../../assets/projectcard/img-3.png') || 'https://via.placeholder.com/300',
+  },
+  {
+    title: 'Ludhiana Bio-Mining',
+    budget: '₹26.5 Cr.',
+    description: 'Advanced bio-mining operations in Ludhiana, transforming waste sites and recovering valuable materials.',
+    image: require('../../assets/projectcard/img-4.png') || 'https://via.placeholder.com/300',
+  },
+  {
+    title: 'Nashik & Akola Bio-Mining',
+    budget: '₹4.3 Cr. (Nadiyala), ₹2.5 Cr. (Adoni)',
+    description: 'Joint bio-mining initiatives in Nashik and Akola, showcasing innovative approaches to waste management and resource recovery.',
+    image: require('../../assets/projectcard/img-5.png') || 'https://via.placeholder.com/300',
+  },
 ];
 
 const ProjectCard = () => {
   useEffect(() => {
-    console.log("ScrollTrigger is working..."); // Check if useEffect runs correctly
     let sections = gsap.utils.toArray(".panel");
 
     gsap.to(sections, {
@@ -48,7 +52,7 @@ const ProjectCard = () => {
         pin: true,
         scrub: 0.1,
         end: "+=3000",
-        markers: false, 
+        markers: false,
       },
     });
 
@@ -57,6 +61,21 @@ const ProjectCard = () => {
     };
   }, []);
 
+  const truncateDescription = (description) => {
+    const words = description.split(' ');
+    let line = '';
+    const formattedDescription = words.reduce((acc, word) => {
+      if (line.length + word.length + 1 <= 150) {
+        line += `${word} `;
+      } else {
+        acc.push(line.trim());
+        line = `${word} `;
+      }
+      return acc;
+    }, []);
+    if (line) formattedDescription.push(line.trim());
+    return formattedDescription;
+  };
 
   return (
     <div className="container-scroll" id="panelContainer">
@@ -66,8 +85,9 @@ const ProjectCard = () => {
             <img src={data.image} alt={data.title} />
             <div className="card-content">
               <h2>{data.title}</h2>
-              <h5>{data.budget}</h5>
-              <p>{data.description}</p>
+              {truncateDescription(data.description).map((line, idx) => (
+                <p key={idx}>{line}</p>
+              ))}
             </div>
           </div>
         </section>

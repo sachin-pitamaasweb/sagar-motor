@@ -71,7 +71,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     border: none;
-    font-size: calc(2vw + 20px);
+    font-size: calc(2vw + 0px);
     cursor: pointer;
     padding: 10px;
     z-index: 10;
@@ -118,7 +118,7 @@
     }
 
     .prev-button, .next-button {
-        font-size: calc(1.5vw + 18px);
+        font-size: calc(1.5vw + 0px);
         padding: 8px;
     }
 }
@@ -148,7 +148,7 @@
     }
 
     .prev-button, .next-button {
-        font-size: calc(1vw + 16px);
+        font-size: calc(1vw + 0px);
         padding: 6px;
     }
 }
@@ -156,7 +156,7 @@
 /* Mobile devices */
 @media (max-width: 600px) {
     .prev-button, .next-button {
-        font-size: calc(0.8vw + 14px);
+        font-size: calc(0.8vw + 0px);
         padding: 5px;
     }
 }
@@ -164,7 +164,7 @@
 /* Very small screens */
 @media (max-width: 400px) {
     .prev-button, .next-button {
-        font-size: calc(0.6vw + 12px);
+        font-size: calc(0.6vw + 0px);
         padding: 4px;
     }
 }

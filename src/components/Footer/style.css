@@ -1,16 +1,15 @@
 /* Footer.css */
-
 .footer {
   width: 100%;
-  background-color: #18181b;
+  background-color: #18181b; /* bg-zinc-900 */
   color: white;
-  padding: 2rem 0;
+  padding: 2rem 0; /* py-8 */
 }
 
 .container {
   max-width: 1800px !important;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem; /* px-4 */
 }
 
 .footer-content {
@@ -20,25 +19,29 @@
   gap: 2rem;
 }
 
-.logo {
-  font-size: 1.5rem;
+.footer-logo {
+  font-size: 1.5rem; /* text-2xl */
   font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em; /* tracking-wider */
 }
 
 .social-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; /* gap-6 */
 }
 
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
+.social-link {
+  color: inherit;
   transition: color 0.3s;
 }
 
-.icon:hover {
-  color: #9ca3af;
+.social-link:hover {
+  color: #a1a1aa; /* hover:text-zinc-400 */
+}
+
+.icon {
+  height: 1.5rem; /* h-6 */
+  width: 1.5rem; /* w-6 */
 }
 
 .nav-desktop {
@@ -49,37 +52,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* gap-4 */
 }
 
-.nav-list {
+.nav-list,
+.nav-list-mobile {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.nav-list li a {
+.nav-link {
+  color: inherit;
   text-decoration: none;
-  color: white;
   transition: color 0.3s;
 }
 
-.nav-list li a:hover {
-  color: #9ca3af;
+.nav-link:hover {
+  color: #a1a1aa; /* hover:text-zinc-400 */
 }
 
 .footer-bottom {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #3f3f46;
+  margin-top: 2rem; /* mt-8 */
+  padding-top: 1rem; /* pt-4 */
+  border-top: 1px solid #27272a; /* border-t border-zinc-800 */
   text-align: center;
-  font-size: 0.875rem;
-  color: #9ca3af;
+  color: #a1a1aa; /* text-zinc-400 */
+  font-size: 0.875rem; /* text-sm */
   display: flex;
   justify-content: space-between;
 }
 
+/* For larger screens */
 @media (min-width: 768px) {
   .footer-content {
     flex-direction: row;
@@ -92,5 +100,10 @@
 
   .nav-mobile {
     display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 1.5rem; /* gap-6 */
   }
 }

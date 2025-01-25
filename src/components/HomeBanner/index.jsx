@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './style.css';
 
 function HomeBanner({ banners }) {
@@ -60,8 +61,12 @@ function HomeBanner({ banners }) {
             </div>
 
             {/* Next and Previous Buttons */}
-            <button className="prev-button" onClick={handlePrev}>←</button>
-            <button className="next-button" onClick={handleNext}>→</button>
+            <button className="prev-button" onClick={handlePrev}>
+                <ChevronLeft className="icon" />
+            </button>
+            <button className="next-button" onClick={handleNext}>
+                <ChevronRight className="icon" />
+            </button>
         </div>
     );
 }

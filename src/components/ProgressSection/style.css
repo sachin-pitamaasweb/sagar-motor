@@ -70,8 +70,8 @@
     }
   
     .image {
-      width: calc(25vw + 80px);
-      height: calc(25vw + 80px);
+      width: calc(25vw + 224px);
+      height: calc(25vw + 86px);
     }
   }
   

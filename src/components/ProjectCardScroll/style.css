@@ -76,6 +76,8 @@ h2 {
 .card-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
     /* Stack title and description */
 }
 
@@ -97,7 +99,7 @@ h2 {
 .card-content p {
     font-size: clamp(50px, 5vw + 42px, 26px);
     /* Dynamic font size between 16px and 36px */
-    color: #fff;
+    color: #a5a4a4;
     margin: 0px;
 }
 
