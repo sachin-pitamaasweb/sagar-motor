@@ -63,6 +63,37 @@ const ContactForm = () => {
                     }
                 );
         },
+        validateOnBlur: true, // Show errors on blur
+        validateOnChange: false, // Do not show errors on every keystroke
+        validate: (values) => {
+            // Custom validation function to trigger Snackbar for errors
+            const errors = {};
+            if (!values.firstName) {
+                errors.firstName = 'First Name is required';
+            }
+            if (!values.lastName) {
+                errors.lastName = 'Last Name is required';
+            }
+            if (!values.phone) {
+                errors.phone = 'Phone number is required';
+            } else if (!/^[0-9]{10}$/.test(values.phone)) {
+                errors.phone = 'Phone number must be 10 digits';
+            }
+            if (!values.email) {
+                errors.email = 'Email is required';
+            } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+                errors.email = 'Invalid email address';
+            }
+            if (!values.message) {
+                errors.message = 'Message is required';
+            }
+            if (Object.keys(errors).length > 0) {
+                setAlertType('error');
+                setAlertMessage(Object.values(errors)[0]); // Display the first error
+                setOpenSnackbar(true);
+            }
+            return errors;
+        },
     });
 
     return (
@@ -85,10 +116,6 @@ const ContactForm = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.firstName}
                             />
-                            {formik.touched.firstName && formik.errors.firstName ? (
-                                <div className="error">{formik.errors.firstName}</div>
-                            ) : null}
-
                             <input
                                 type="text"
                                 placeholder="Last Name"
@@ -98,9 +125,6 @@ const ContactForm = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.lastName}
                             />
-                            {formik.touched.lastName && formik.errors.lastName ? (
-                                <div className="error">{formik.errors.lastName}</div>
-                            ) : null}
                         </div>
 
                         <input
@@ -112,9 +136,6 @@ const ContactForm = () => {
                             onBlur={formik.handleBlur}
                             value={formik.values.phone}
                         />
-                        {formik.touched.phone && formik.errors.phone ? (
-                            <div className="error">{formik.errors.phone}</div>
-                        ) : null}
 
                         <input
                             type="email"
@@ -125,9 +146,6 @@ const ContactForm = () => {
                             onBlur={formik.handleBlur}
                             value={formik.values.email}
                         />
-                        {formik.touched.email && formik.errors.email ? (
-                            <div className="error">{formik.errors.email}</div>
-                        ) : null}
 
                         <textarea
                             placeholder="Message"
@@ -137,9 +155,6 @@ const ContactForm = () => {
                             onBlur={formik.handleBlur}
                             value={formik.values.message}
                         ></textarea>
-                        {formik.touched.message && formik.errors.message ? (
-                            <div className="error">{formik.errors.message}</div>
-                        ) : null}
 
                         <button
                             type="submit"

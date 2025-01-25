@@ -3,11 +3,6 @@
   src: url('./assets/fonts/MADE-Tommy-Soft-Light-PERSONAL-USE.woff') format('woff2');
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 body {
   margin: 0;
   font-family: 'MADE-Tommy-Soft-Light-PERSONAL-USE',
