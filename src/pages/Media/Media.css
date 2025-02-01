@@ -1,0 +1,67 @@
+/* Media.css */
+.media-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #1a202c;
+    overflow: hidden;
+}
+
+.menu-icon button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.latest-events {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.latest-events h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-images {
+    display: flex;
+    gap: 10px;
+}
+
+.event-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.event-thumbnail:hover {
+    transform: scale(1.1);
+}

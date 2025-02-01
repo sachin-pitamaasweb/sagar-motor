@@ -105,25 +105,22 @@ const Home = () => {
     // Detect device size
     const isTabletOrMobile = useMediaQuery('(max-width: 1024px)');
     const isDesktop = useMediaQuery('(min-width: 1025px)');
-    const imageUrl = require('../../assets/banner/img-4.png');
+    // const imageUrl = require('../../assets/banner/img-4.png');
     const dummyBanners = [
-        {
-            mediaType: 'video',
-            mediaSource: 'https://res.cloudinary.com/dtivafy25/video/upload/v1728546114/Sagar_motor_-_Made_with_Clipchamp_1_.mp4_Compssssss_mi3hff.mp4',
-            altText: 'Banner 2',
-            title: 'Driving the Next Generation of AUTOMOTIVE EXCELLENCE',
-            description: 'Redefining Standards in Performance and Efficiency.',
-            buttonText: 'Discover More',
-            linkTo: '/about'
-        },
+        // {
+        //     mediaType: 'video',
+        //     mediaSource: 'https://res.cloudinary.com/dtivafy25/video/upload/v1728546114/Sagar_motor_-_Made_with_Clipchamp_1_.mp4_Compssssss_mi3hff.mp4',
+        //     altText: 'Banner 2',
+        //     title: 'Driving the Next Generation of AUTOMOTIVE EXCELLENCE',
+        //     description: 'Redefining Standards in Performance and Efficiency.',
+        //     buttonText: 'Discover More',
+        //     linkTo: '/about'
+        // },
         {
             mediaType: 'image',
-            mediaSource: imageUrl || 'https://via.placeholder.com/800x400.png?text=Banner+3',
+            mediaSource: 'https://res.cloudinary.com/dtivafy25/image/upload/v1738406185/Website_Banner_og3fjb.jpg',
             altText: 'Banner 3',
-            title: 'Advancing Mobility, Safeguarding the Planet',
-            description: 'Innovating transportation solutions that move the world forward while protecting the environment.',
-            buttonText: 'Explore Now',
-            linkTo: '/about'
+           isTrue: 'home',
         }
     ];
 

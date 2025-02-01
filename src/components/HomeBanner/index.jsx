@@ -1,4 +1,3 @@
-// Banner.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -9,16 +8,23 @@ function HomeBanner({ banners }) {
     const navigate = useNavigate();
     const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
 
-    // Destructure current banner details
-    const { mediaType, mediaSource, altText, title, description, buttonText, linkTo } = banners[currentBannerIndex];
+    const currentBanner = banners[currentBannerIndex] || {};
+    const {
+        mediaType = 'image',
+        mediaSource = '',
+        altText = 'Banner Image',
+        title = '',
+        description = '',
+        buttonText = 'Learn More',
+        linkTo = '/',
+        isTrue = ''
+    } = currentBanner;
 
-    // Handle the button click and navigate to the specified link
     const handleClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        navigate(linkTo);
+        if (linkTo) navigate(linkTo);
     };
 
-    // Handle next and previous button click
     const handleNext = () => {
         setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
     };
@@ -27,9 +33,10 @@ function HomeBanner({ banners }) {
         setCurrentBannerIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
     };
 
+    console.log('Number of Banners:', banners.length); // Debug log
+
     return (
         <div className="banner">
-            {/* Render video or image based on the mediaType prop */}
             {mediaType === 'video' ? (
                 <video className="banner-media" autoPlay muted loop playsInline preload="auto">
                     <source src={mediaSource} type="video/mp4" />
@@ -39,44 +46,51 @@ function HomeBanner({ banners }) {
                 <img className="banner-media" src={mediaSource} alt={altText} />
             )}
 
-            {/* Overlay to create a darker background effect */}
-            <div className="overlay"></div>
+            {!isTrue.includes('home') && <div className="overlay"></div>}
 
-            {/* Banner content */}
             <div className="banner-content">
                 <div className="banner-text">
-                    {/* Dynamic title and description */}
-                    <h1 className="banner-title">
-                        {title.split(' ').map((word, index) => (
-                            <span key={index} className={index % 2 === 1 ? 'banner-title-span' : ''}>{word} </span>
-                        ))}
-                    </h1>
-                    <p className="banner-description">{description}</p>
+                    {title && (
+                        <h1 className="banner-title">
+                            {title.split(' ').map((word, index) => (
+                                <span key={index} className={index % 2 === 1 ? 'banner-title-span' : ''}>
+                                    {word}{' '}
+                                </span>
+                            ))}
+                        </h1>
+                    )}
 
-                    {/* Dynamic button text */}
-                    <button className="learn-more" onClick={handleClick}>
-                        {buttonText}
-                    </button>
+                    {description && <p className="banner-description">{description}</p>}
+
+                    {/* ✅ Hide Button if only 1 Banner */}
+                    {buttonText && banners.length > 1 && (
+                        <button className="learn-more" onClick={handleClick}>
+                            {buttonText}
+                        </button>
+                    )}
                 </div>
             </div>
 
-            {/* Next and Previous Buttons */}
-            <button className="prev-button" onClick={handlePrev}>
-                <ChevronLeft className="icon" />
-            </button>
-            <button className="next-button" onClick={handleNext}>
-                <ChevronRight className="icon" />
-            </button>
+            {/* ✅ Hide Navigation Buttons if Only 1 Banner */}
+            {banners.length > 1 && (
+                <>
+                    <button className="prev-button" onClick={handlePrev}>
+                        <ChevronLeft className="icon" />
+                    </button>
+                    <button className="next-button" onClick={handleNext}>
+                        <ChevronRight className="icon" />
+                    </button>
+                </>
+            )}
         </div>
     );
 }
 
-// Define propTypes for the component
 HomeBanner.propTypes = {
     banners: PropTypes.arrayOf(
         PropTypes.shape({
-            mediaType: PropTypes.oneOf(['video', 'image']).isRequired,
-            mediaSource: PropTypes.string.isRequired,
+            mediaType: PropTypes.oneOf(['video', 'image']),
+            mediaSource: PropTypes.string,
             altText: PropTypes.string,
             title: PropTypes.string,
             description: PropTypes.string,

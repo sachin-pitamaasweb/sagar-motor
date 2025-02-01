@@ -40,6 +40,7 @@ function Header() {
     { text: 'About Us', path: 'about' }, // Changed About Us link to /company/about-us
     { text: 'Infrastructure', path: '/infrastructure' }, // Changed Infrastructure link to /services/infrastructure
     { text: 'Projects', path: 'projects' }, // Changed Projects link to /portfolio/projects
+    { text:'Media', path: 'media'},
     { text: 'Contact Us', path: 'contact' }, // Changed Contact Us link to /support/contact
   ];
 

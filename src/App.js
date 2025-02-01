@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Infrastructure from "./pages/Infrastructure";
+import Media from "./pages/Media";
 import Loader from "./components/Loader";
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/infrastructure" element={<Infrastructure />} />
+                <Route path="/media" element={<Media />} />
               </Routes>
               <Footer />
             </Router>
