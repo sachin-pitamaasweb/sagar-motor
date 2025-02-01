@@ -97,101 +97,103 @@ const ContactForm = () => {
     });
 
     return (
-        <Box className="contact-form-container">
-            <h2 className="contact-form-heading">
-                Your Trusted Partner, Always Within Reach
-            </h2>
+        <section className="contact-form-section">
+            <Box className="contact-form-container">
+                <h2 className="contact-form-heading">
+                    Your Trusted Partner, Always Within Reach
+                </h2>
 
-            <Grid container spacing={3} alignItems="center">
-                {/* Form Section: 8 columns */}
-                <Grid item xs={12} sm={8}>
-                    <form className="contact-form" onSubmit={formik.handleSubmit}>
-                        <div className="contact-form-row">
+                <Grid container spacing={3} alignItems="center">
+                    {/* Form Section: 8 columns */}
+                    <Grid item xs={12} sm={8}>
+                        <form className="contact-form" onSubmit={formik.handleSubmit}>
+                            <div className="contact-form-row">
+                                <input
+                                    type="text"
+                                    placeholder="First Name"
+                                    className="contact-input"
+                                    name="firstName"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.firstName}
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Last Name"
+                                    className="contact-input"
+                                    name="lastName"
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.lastName}
+                                />
+                            </div>
+
                             <input
-                                type="text"
-                                placeholder="First Name"
-                                className="contact-input"
-                                name="firstName"
+                                type="tel"
+                                placeholder="Phone No."
+                                className="contact-input full-width"
+                                name="phone"
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                value={formik.values.firstName}
+                                value={formik.values.phone}
                             />
+
                             <input
-                                type="text"
-                                placeholder="Last Name"
-                                className="contact-input"
-                                name="lastName"
+                                type="email"
+                                placeholder="Email Address"
+                                className="contact-input full-width"
+                                name="email"
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                value={formik.values.lastName}
+                                value={formik.values.email}
                             />
-                        </div>
 
-                        <input
-                            type="tel"
-                            placeholder="Phone No."
-                            className="contact-input full-width"
-                            name="phone"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.phone}
-                        />
+                            <textarea
+                                placeholder="Message"
+                                className="contact-textarea"
+                                name="message"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.message}
+                            ></textarea>
 
-                        <input
-                            type="email"
-                            placeholder="Email Address"
-                            className="contact-input full-width"
-                            name="email"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.email}
-                        />
+                            <button
+                                type="submit"
+                                className="contact-submit-button"
+                                disabled={formik.isSubmitting || loading}
+                            >
+                                {loading ? 'Sending...' : 'SEND'}
+                            </button>
+                        </form>
+                    </Grid>
 
-                        <textarea
-                            placeholder="Message"
-                            className="contact-textarea"
-                            name="message"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.message}
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            className="contact-submit-button"
-                            disabled={formik.isSubmitting || loading}
-                        >
-                            {loading ? 'Sending...' : 'SEND'}
-                        </button>
-                    </form>
+                    {/* Image Section: 4 columns */}
+                    <Grid item xs={12} sm={4}>
+                        <Box className="contact-image">
+                            <img
+                                src={
+                                    'https://res.cloudinary.com/dtivafy25/image/upload/v1726654760/1321231131_glgvqm.gif' ||
+                                    'https://via.placeholder.com/300x300.png?text=Paper+Plane'
+                                }
+                                alt="Paper Plane"
+                            />
+                        </Box>
+                    </Grid>
                 </Grid>
 
-                {/* Image Section: 4 columns */}
-                <Grid item xs={12} sm={4}>
-                    <Box className="contact-image">
-                        <img
-                            src={
-                                'https://res.cloudinary.com/dtivafy25/image/upload/v1726654760/1321231131_glgvqm.gif' ||
-                                'https://via.placeholder.com/300x300.png?text=Paper+Plane'
-                            }
-                            alt="Paper Plane"
-                        />
-                    </Box>
-                </Grid>
-            </Grid>
-
-            {/* Snackbar with Alert */}
-            <Snackbar
-                open={openSnackbar}
-                autoHideDuration={4000}
-                onClose={handleCloseSnackbar}
-                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-            >
-                <Alert onClose={handleCloseSnackbar} severity={alertType} sx={{ width: '100%' }}>
-                    {alertMessage}
-                </Alert>
-            </Snackbar>
-        </Box>
+                {/* Snackbar with Alert */}
+                <Snackbar
+                    open={openSnackbar}
+                    autoHideDuration={4000}
+                    onClose={handleCloseSnackbar}
+                    anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                >
+                    <Alert onClose={handleCloseSnackbar} severity={alertType} sx={{ width: '100%' }}>
+                        {alertMessage}
+                    </Alert>
+                </Snackbar>
+            </Box>
+        </section>
     );
 };
 

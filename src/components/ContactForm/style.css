@@ -1,9 +1,21 @@
+.contact-form-section {
+    /* background: linear-gradient(135deg, #1a1a1a, #2b2b2b); */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    box-sizing: border-box;
+}
+
 /* Main container for the form */
 .contact-form-container {
-    padding: calc(2vw + 20px);
+    /* padding: calc(2vw + 20px); */
     color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    width: 100%;
+    max-width: 80rem;
 }
 
 /* Heading for the form */
